@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="majordwarf.github.io/tag/updates/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="majordwarf.github.io/" rel="alternate" type="text/html" />
+  <updated>2020-05-06T20:48:57+00:00</updated>
+  <id>majordwarf.github.io/tag/updates/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">majordwarf’s blog | </title>
+  
+
+  
+    <subtitle>Code. Coffee. Repeat.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Hello World! 🚀</title>
+      <link href="majordwarf.github.io/hello-world" rel="alternate" type="text/html" title="Hello World! 🚀" />
+      <published>2020-05-06T12:00:00+00:00</published>
+      <updated>2020-05-06T12:00:00+00:00</updated>
+      <id>majordwarf.github.io/hello-world</id>
+      <content type="html" xml:base="majordwarf.github.io/hello-world">&lt;p&gt;Hello! Is this thing even on? testing 1..2..3..mic check&lt;/p&gt;
+
+&lt;p&gt;Alright! restarted the blog again using Jekyll! Will keep up with my experiences through GSoC, projects I work on and hopefully some other stuff. Will work on porting my older post to this new blog over time.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Tejas Tank</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="updates" />
+      
+
+      
+        <summary type="html">Hello! Is this thing even on? testing 1..2..3..mic check</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
