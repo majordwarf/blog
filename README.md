@@ -1,3 +1,26 @@
+<h1 align="center">majordwarf's blog</h1>
+
+<h5 align="center">Personal Blog Built Using Jekyll</h5>
+
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/majordwarf/majordwarf.github.io)
+[![Build Status](https://travis-ci.org/majordwarf/majordwarf.github.io.svg?branch=dev)](https://travis-ci.org/majordwarf/majordwarf.github.io)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+<h2 id="built-with">Built With</h2>
+
+The following blog is built using the following software, you'll need them installed in your workspace to run properly. All the assets are compiled using `gulp` you'll need it installed on your system to make some changes to any of the static assets.
+
+* [Node](https://nodejs.org/en/) `> v12.0.0 !important`
+* [Jekyll](https://jekyllrb.com//)
+* [Yarn](https://yarnpkg.com/en/)
+
+---
+
+<details>
+  <summary>Theme: Jasper 2 Information</summary>
+
 ## Jasper2
 
 [![Build Status](https://travis-ci.org/jekyller/jasper2.svg?branch=master)](https://travis-ci.org/jekyller/jasper2)
@@ -110,3 +133,5 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+</details>

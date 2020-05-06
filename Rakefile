@@ -13,7 +13,7 @@ CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"]
 REPO = CONFIG["repo"]
 SOURCE_BRANCH = CONFIG["branch"]
-DESTINATION_BRANCH = "gh-pages"
+DESTINATION_BRANCH = "master"
 CNAME = CONFIG["CNAME"]
 
 def check_destination
@@ -62,7 +62,7 @@ namespace :site do
     Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
 
     # Generate the site
-    sh "bundle exec jekyll build"
+    sh "JEKYLL_ENV=production bundle exec jekyll build"
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
