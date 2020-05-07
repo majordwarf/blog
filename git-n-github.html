@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Getting Started With Git And GitHub 🐙</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Code. Coffee. Repeat." />
+    <link rel="shortcut icon" href="https://majordwarf.github.io/assets/images/logo.png" type="image/png" />
+    <link rel="canonical" href="https://majordwarf.github.io/git-n-github" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="majordwarf's blog" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Getting Started With Git And GitHub 🐙" />
+    <meta property="og:description" content="Introduction To Git and GitHub Git is the most popular software to maintain multiple versions of your code and is one of the tools essential for software development in the industry. On the other hand, GitHub is a code hosting platform for collaboration and version control. This is a tool" />
+    <meta property="og:url" content="https://majordwarf.github.io/git-n-github" />
+    <meta property="og:image" content="https://majordwarf.github.io/assets/images/git-n-github.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/majordwarf" />
+    <meta property="article:author" content="https://www.facebook.com/majordwarf" />
+    <meta property="article:published_time" content="2020-05-06T12:00:00+00:00" />
+    <meta property="article:modified_time" content="2020-05-06T12:00:00+00:00" />
+    <meta property="article:tag" content="Guide" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Getting Started With Git And GitHub 🐙" />
+    <meta name="twitter:description" content="Introduction To Git and GitHub Git is the most popular software to maintain multiple versions of your code and is one of the tools essential for software development in the industry. On the other hand, GitHub is a code hosting platform for collaboration and version control. This is a tool" />
+    <meta name="twitter:url" content="https://majordwarf.github.io/" />
+    <meta name="twitter:image" content="https://majordwarf.github.io/assets/images/git-n-github.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="majordwarf's blog" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Guide" />
+    <meta name="twitter:site" content="@majordwarf" />
+    <meta name="twitter:creator" content="@majordwarf" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "majordwarf's blog",
+        "logo": "https://majordwarf.github.io/"
+    },
+    "url": "https://majordwarf.github.io/git-n-github",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://majordwarf.github.io/assets/images/git-n-github.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://majordwarf.github.io/git-n-github"
+    },
+    "description": "Introduction To Git and GitHub Git is the most popular software to maintain multiple versions of your code and is one of the tools essential for software development in the industry. On the other hand, GitHub is a code hosting platform for collaboration and version control. This is a tool"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Getting Started With Git And GitHub 🐙" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://majordwarf.github.io/">majordwarf's blog</a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+                <a class="social-link social-link-fb" href="https://facebook.com/majordwarf" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/majordwarf" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-guide ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 6 May 2020"> 6 May 2020</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/guide/'>GUIDE</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Getting Started With Git And GitHub 🐙</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/git-n-github.png)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h1 id="introduction-to-git-and-github">Introduction To Git and GitHub</h1>
+
+<p>Git is the most popular software to maintain multiple versions of your code and is one of the tools essential for software development in the industry. On the other hand, GitHub is a code hosting platform for collaboration and version control. This is a tool without which you don’t want to be.</p>
+
+<hr />
+<h2 id="what-is-git">What is Git?</h2>
+
+<p>Considering you are a complete outsider, imagine you and your friends are working on a research paper. You start writing the introduction in a word file, now one of your friends enters the room and says, “Hey, I got some new research data that could improve our paper!” So, now he continues writing on the same document on the same laptop. Now after weeks of such collaboration and multiple changes by friends, you find some inconsistencies in the paper, and you don’t remember who made which changes.</p>
+
+<p>Collaborating in such an environment can cause issues to imagine the same case in the world of software development, where multiple files are being changed continuously by different programmers and that too simultaneously! This is where a Version Control System (VCS) comes into the play it provides features such as collaboration between different users, managing different versions of the source code, keeping track of all the changes, who did it, when, and why.</p>
+
+<p>Git isn’t the only VCS out there but is one of the widely used and is a distributed version control system. The “distributed” part refers to the section that allows users to collaborate on the same project on the different system remotely irrespective of their operating system.</p>
+
+<hr />
+<h2 id="installing-git">Installing Git</h2>
+
+<p>Git comes installed by default on many systems. If you don’t already have it:</p>
+
+<ul>
+  <li>You can download the Git Command Line Interface (CLI) from their <a href="https://git-scm.com/downloads">official website</a>, which is one of the recommended ways for both new and advance users.</li>
+  <li>You can also download the GUI Client from their <a href="https://desktop.github.com/">official website</a> too, but currently, it’s only available for Windows and macOS.</li>
+  <li><a href="https://www.gitkraken.com/git-client">Git Kraken</a> is one of the third-party GUI Client that is recommended widely.</li>
+</ul>
+
+<hr />
+<h2 id="setting-up-git">Setting Up Git</h2>
+
+<p>Once git is installed on your system, you need to check if it’s working correctly. That can be done typing the following command in the Git Bash(Windows) or inside the Terminal (UNIX/Linux):</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> git <span class="nt">--version</span>
+<span class="go">git version 2.20.1 // Latest version during the time of writing this article.
+</span></code></pre></div></div>
+<p>If the above command doesn’t return a version number probably git isn’t installed correctly on your system.</p>
+
+<p>After git is set-up properly, it’s time to set-up your username and email id for git to use system-wide. Remember how git keeps the log of who made the changes? This username and email you’ll provide now will be used to sign every commit made by you. These need to be the same as your GitHub username and email id to keep track of all the contributions you do on GitHub. You can set-up your username and email as follow:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> git config <span class="nt">--global</span> user.name &lt;username&gt;
+<span class="gp">$</span> git config <span class="nt">--global</span> user.email &lt;email&gt;
+</code></pre></div></div>
+<p>Did you notice the <code class="highlighter-rouge">--global</code> argument above? That states that you want that username and email to be used for any future commit you made on any git repository on the system.</p>
+
+<p>If you want to override the following information for a particular repository, just <code class="highlighter-rouge">cd</code> used into that repository and perform the same command eliminating the <code class="highlighter-rouge">--global</code> argument, and you’re good to go!</p>
+
+<hr />
+<h2 id="commands">Commands</h2>
+<p>Now let’s learn a few commands that we’ll be using throughout our <em>WHOLE LIVES!</em></p>
+
+<blockquote>
+  <p>Make your repository</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command: git init
+</code></pre></div></div>
+
+<p>The following folder will create a hidden .git folder inside the current working directory that will track all the changes made to any file inside this folder -this is the “repository” (or repo) where git stores all of its internal tracking data. You neither will interact with the following folder nor will delete it. Any existing project or even an empty project can be turned into a git repository.</p>
+
+<blockquote>
+  <p>Forking someone’s repository</p>
+</blockquote>
+
+<p>You don’t have write access to someone’s repository on GitHub. Forks are the way of getting a copy of the latest code under your GitHub id so you can write new changes to it and modify it as you need.</p>
+
+<blockquote>
+  <p>Clone a repository</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command: git clone &lt;url&gt;
+</code></pre></div></div>
+
+<p>That will download the latest git repository from the specified URL on your local system. A folder with the same name as the repository will be created, and all the data will be fetched inside this directory.</p>
+
+<p>When you clone a repository, the source from where you got the repository will be added as the remote origin. We’ll look into what remotes are soon!</p>
+
+<blockquote>
+  <p>Check status of your project</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command: git status
+</code></pre></div></div>
+
+<p>This will show the current status of the project, like how many commits we are ahead of remotes, which files are modified, which files are tracked and other basic information. If you are confused at some point in whether you changed something by mistake, you can always check the status of the project.</p>
+
+<blockquote>
+  <p>Branching out stuff!</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Commands: 
+git branch // To list all the branches in current repo
+git branch &lt;branch_name&gt; // Creates a branch with the specified name
+git branch -d &lt;branch_name&gt; // Deletes the branch specified if it exists
+git checkout &lt;branch_name&gt; // Switch to the branch specified
+
+git checkout -b &lt;branch_name&gt; // Creates a new branch and switches to it automatically
+</code></pre></div></div>
+<p>Branches, as the name suggests, creates a new branch of your code that is separate from your master branch, so you can write and test all the experimental features you need in your app with messing with the stable version of your code. Once everything seems working fine, you can merge these new features into the master branch avoiding all the paths in which your user would have faced some app crash.</p>
+
+<p>Branches are generally used to fix bugs, add new features, test something experimental. So, even if anything goes wrong, you can delete the branch or reset it to the old working version, i.e.- master branch. When you list all the branches using the <code class="highlighter-rouge">git branch</code> command, the branch with <code class="highlighter-rouge">*</code> (asterisk) in front of its name states the current branch.</p>
+
+<blockquote>
+  <p>Stage your changes</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Commands:
+git add &lt;filename&gt; // To track a particular file
+git add * // To track all the new and modified files
+</code></pre></div></div>
+<p>Git doesn’t know which files you want to include in the next version/commit of your code. So after making the changes and before telling git to make a new checkpoint, you need to tell it which files you want to include in the “stagging” area (or “ready to be committed”).</p>
+
+<p>After stagging some changes, if you go and make new changes even to the same files, the new changes won’t be tracked. This is useful to make sure what you’re committing and not including. If confused, which files are tracked and which aren’t you can check the status of the repository. Files to be committed will be displayed in “green” and files which aren’t being tracked will be displayed in “red” color.</p>
+
+<blockquote>
+  <p>Committing your staged changes</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Commands:
+git commit // To write a commit with a multiline message
+git commit -m "&lt;message&gt;" // To write a small commit message
+</code></pre></div></div>
+<p>So once you’ve made changes to the project you need, you’ll need to make sure that changes are stored permanently as a checkpoint. The following is done by committing the staged changes using the commit command. You’ll also need to pass a message along with the commit so you or someone else collaborating on the project can come to know what changes were made and why.</p>
+
+<p>Each commits automatically stores data like the username and email of the person who made the changes, timestamp, and message of the commit and assigns it a unique hashed string.</p>
+
+<blockquote>
+  <p>Remotes</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Commands:
+git remote -v // Lists all remote with their endpoint url
+git remote add &lt;remote_name&gt; &lt;url&gt; // Adds the URL as a new remote with the specified name to that repository
+</code></pre></div></div>
+
+<p>So remotes are the place where you want to pull the changes or even push your latest changes. So whenever you make some change to someone else’s repository using a branch and that changes are merged in his master branch, your local master branch is not in sync with the latest update. You can update your local code by pulling the changes from the master branch of that remote.</p>
+
+<p>Remotes are also used to test changes from someone’s changes. Suppose someone made a fork of your code and is working on some new feature, in case you want to experiment that changes, you add that repository as a new remote and pull the changes or branch locally to test them. In short, remotes can be explained as endpoints to keeping code in sync.</p>
+
+<p>If you make a new repository and want to upload the code to GitHub, create an empty repository on GitHub, add the URL of that repository as a remote, and then push the changes.</p>
+
+<blockquote>
+  <p>Pushing the changes somewhere</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command: git push &lt;remote_name&gt; &lt;branch_name&gt;
+</code></pre></div></div>
+
+<p>Pushing changes uploads your changes of a branch to the remote you specified to keep your code on the server/GitHub up-to-date.</p>
+
+<p>After pushing the changes successfully, your team members will be able to pull the latest changes locally on their system.</p>
+
+<blockquote>
+  <p>Getting the latest changes</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Commands:
+git fetch --all // Fetches all the latest changes and branches from all the remotes
+git pull &lt;remote_name&gt; &lt;branch_name&gt; // Fetches the latest changes from the branch of specified remote
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">git fetch</code> command fetches all the changes from remotes that are specified and store all the updates in <code class="highlighter-rouge">.git</code> folder but you’ll still be on the checkpoint you were earlier. You’ll need to merge all the latest changes or the branch you need manually.</p>
+
+<p>To avoid this, use the <code class="highlighter-rouge">git pull</code> command that fetches and merges the changes all in one step. So <code class="highlighter-rouge">git pull origin master</code> will pull the changes that exist in the “master” branch of the remote “origin” and merge it into the current local branch you’re on.</p>
+
+<blockquote>
+  <p>Conflicts!</p>
+</blockquote>
+
+<p>Suppose you try to pull some changes from a remote and there are some changes made by someone on the same line as you on the same file this will cause a merge conflict as git isn’t that smart to know what changes are right for the code. In this case, git asks you to choose what is right and make a new commit. Once there is a conflict, the conflict causing file modified by git and waits for a commit.</p>
+
+<p>Content of conflicting file looks like this:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="n">HEAD</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="o">=======</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span class="mi">384</span><span class="n">dcc1ac63b820c34684354896737ed1ae3f7f6</span>
+<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Here everything between <code class="highlighter-rouge">&gt;&gt;&gt;&gt;&gt;&gt;&gt; HEAD</code> and <code class="highlighter-rouge">=======</code> are the changes made by you and everything between <code class="highlighter-rouge">=======</code> and <code class="highlighter-rouge">&lt;&lt;&lt;&lt;&lt;&lt;&lt; 384dcc1ac63b820c34684354896737ed1ae3f7f6</code> (the random string is the commit id of the remote change) is the change that existed on the remote. Suppose you want your local change to be the final change then you’ll erase the other content that was generated by git, the final file will look like this,</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Now you’ll track the file you just changed and make a new commit stating a suitable message, e.g.-</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add *
+git commit -m "Fix merge conflict"
+</code></pre></div></div>
+<hr />
+
+<p>Now you know everything you’ll ever need to begin and contribute to open-source or even start working on your next big project and maintaining it’s code! There are some other small things that we’ll be covering in future workshops. If you want to practice what you have learned today, we’ve made three small tasks - <a href="https://github.com/devclub-workshops/Git-Workshop-Tasks">here</a></p>
+
+<p>Hope you had fun and learnt something cool!</p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/logo.png" alt="majordwarf" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/majordwarf">Tejas Tank</a></h4>
+                                
+                                    <p>Student | Software Developer | Writing code and absolutely nothing is on fire 🔥</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/majordwarf">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/hello-world">
+                <div class="post-card-image" style="background-image: url(/assets/images/hello-world.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/hello-world">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Updates</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Hello World! 🚀</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Tejas Tank" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/majordwarf/">Tejas Tank</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://majordwarf.github.io/">
+            
+                <img src="/assets/images/logo_transparent.png" alt="majordwarf's blog icon" />
+            
+            <span>majordwarf's blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Getting Started With Git And GitHub 🐙</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Getting+Started+With+Git+And+GitHub+%F0%9F%90%99&amp;url=https://majordawrf.github.iogit-n-github"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://majordawrf.github.iogit-n-github"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://majordwarf.github.io/">majordwarf's blog</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    <a href="https://facebook.com/majordwarf" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/majordwarf" target="_blank" rel="noopener">Twitter</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-140679919-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
