@@ -4,7 +4,7 @@
     <title> - Articles</title>
     <description>Code. Coffee. Repeat.</description>
     <link>
-    https://majordwarf.github.io</link>
+    </link>
     
       
       <item>
@@ -16,8 +16,8 @@
         
         <pubDate>Wed, 06 May 2020 12:00:00 +0000</pubDate>
         <link>
-        https://majordwarf.github.io/git-n-github</link>
-        <guid isPermaLink="true">https://majordwarf.github.io/git-n-github</guid>
+        /git-n-github</link>
+        <guid isPermaLink="true">/git-n-github</guid>
       </item>
       
     
@@ -31,8 +31,8 @@
         
         <pubDate>Wed, 06 May 2020 12:00:00 +0000</pubDate>
         <link>
-        https://majordwarf.github.io/hello-world</link>
-        <guid isPermaLink="true">https://majordwarf.github.io/hello-world</guid>
+        /hello-world</link>
+        <guid isPermaLink="true">/hello-world</guid>
       </item>
       
     
